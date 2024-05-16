@@ -1,0 +1,7 @@
+package-as: PingTattlerClassic
+enable-nolib-creation: no
+
+ignore:
+  - .gitignore
+  - .pkgmeta
+  - README.md
