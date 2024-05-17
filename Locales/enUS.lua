@@ -1,0 +1,34 @@
+local addonName, pingo = ...
+local L = LibStub("AceLocale-3.0"):NewLocale(addonName, "enUS", true)
+if not L then return end
+  --L["Term"] = true -- Example
+L["Ping Me"] = true
+L["Pinged"] = true
+L["East"] = true
+L["North-East"] = true
+L["North"] = true
+L["North-West"] = true
+L["West"] = true
+L["South-West"] = true
+L["South"] = true
+L["South-East"] = true
+L["Self"] = true
+L["Mute"] = true
+L["Muted"] = true
+L["Not Muted"] = true
+L["|cffff7f00Click|r to ping your location"] = true
+L["|cffff7f00Right Click|r to open options"] = true
+L["|cffff7f00Middle Click|r to mute"] = true
+L["Hide from Minimap"] = true
+L["Screen Notifications"] = true
+L["Chat Notifications"] = true
+L["Minimap Overlay"] = true
+L["Icon Size"] = true
+L["Set size of the directional icon"] = true
+L["Distance"] = true
+L["Set icon distance from center"] = true
+L["ChatFrame"] = true
+L["Anchor"] = true
+L["Anchor to Minimap Side"] = true
+
+pingo.L = L

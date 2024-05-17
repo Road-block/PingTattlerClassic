@@ -1,0 +1,13 @@
+## Interface: 40400
+## Title: Ping|T136437:14|t Tattler|T1092906:16|t Classic
+## Version: 1.0
+## IconTexture: Interface\MINIMAP\Ping\ping2.blp
+## Notes: Ping Notifications
+## Author: Road-block
+## OptionalDeps: Ace3, LibSink-2.0, LibDataBroker-1.1, LibDBIcon-1.0
+## SavedVariables: PingTattlerClassicDB
+
+Libs\load.xml
+Locales\load.xml
+
+core.lua
