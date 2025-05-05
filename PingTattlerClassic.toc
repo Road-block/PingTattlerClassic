@@ -1,6 +1,6 @@
-## Interface: 40400
+## Interface: 50500,40402,11507
 ## Title: Ping|T136437:14|t Tattler|T1092906:16|t Classic
-## Version: 1.0.1
+## Version: 1.0.2
 ## IconTexture: 136437
 ## Notes: Ping Notifications
 ## Author: Road-block

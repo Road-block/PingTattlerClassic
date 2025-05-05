@@ -1,4 +1,4 @@
-## Interface: 40402
+## Interface: 50500
 ## Title: Ping|T136437:14|t Tattler|T1092906:16|t Classic
 ## Version: 1.0.2
 ## IconTexture: 136437
