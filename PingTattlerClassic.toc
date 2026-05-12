@@ -1,7 +1,8 @@
-## Interface: 50500,40402,11507
+## Interface: 50503,40402,11508,50504
 ## Title: Ping|T136437:14|t Tattler|T1092906:16|t Classic
-## Version: 1.0.2
+## Version: 1.0.3
 ## IconTexture: 136437
+## Category: Map
 ## Notes: Ping Notifications
 ## Author: Road-block
 ## OptionalDeps: Ace3, LibSink-2.0, LibDataBroker-1.1, LibDBIcon-1.0

@@ -13,6 +13,8 @@ addon._version = C_AddOns.GetAddOnMetadata(addonName,"Version")
 addon._addonName = addonName.." "..addon._version
 addon._addonNameC = LIGHTBLUE_FONT_COLOR:WrapTextInColorCode(addon._addonName)
 addon._addonNameS = LIGHTBLUE_FONT_COLOR:WrapTextInColorCode("PTC")
+addon._baseframe = CreateFrame("Frame")
+
 local _p = {}
 _p.PI = math.pi
 _p.TWOPI = 2*_p.PI
@@ -30,6 +32,8 @@ local CLASS_ICON_TCOORDS = CLASS_ICON_TCOORDS or {
   ["WARLOCK"]     = {0.7421875, 0.98828125, 0.25, 0.5},
   ["PALADIN"]     = {0, 0.25, 0.5, 0.75},
   ["DEATHKNIGHT"] = {0.25, .5, 0.5, .75},
+  ["MONK"]        = {0.5, 0.73828125, 0.5, .75},
+  ["DEMONHUNTER"] = {0.7421875, 0.98828125, 0.5, 0.75},
 }
 local ROLE_ICON_TCOORDS = {
   ["TANK"]        = {0, 0.25, 0.25, 0.5},
@@ -322,7 +326,13 @@ function addon:OnEnable() -- PLAYER_LOGIN
   self.MiniMessage:EnableMouseWheel(false)
   self:MinimapOverlayUpdate()
 
-  self:RegisterEvent("MINIMAP_PING")
+  if C_EventUtils.IsEventValid("MINIMAP_PING") then
+    self:RegisterEvent("MINIMAP_PING")
+  elseif C_EventUtils.IsCallbackEvent("MINIMAP_PING") then
+    self._baseframe:RegisterEventCallback("MINIMAP_PING", function(_,...)
+      addon:MINIMAP_PING(_,...)
+    end)
+  end
   if IsInGuild() then
     self:RegisterEvent("GUILD_ROSTER_UPDATE")
   else
